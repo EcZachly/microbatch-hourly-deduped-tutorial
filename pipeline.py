@@ -114,7 +114,7 @@ for product_name in products:
                                 COALESCE(e.product_id, l.product_id) as product_id,
                                 COALESCE(e.event_type, l.event_type) AS event_type,
                                 COALESCE(e.min_event_timestamp_epoch, l.min_event_timestamp_epoch) as min_event_timestamp_epoch,
-                                COALESCE(l.max_event_timestamp_epoch, e.max_event_timestamp_epoch) AS ma_event_timestamp_epoch,
+                                COALESCE(l.max_event_timestamp_epoch, e.max_event_timestamp_epoch) AS max_event_timestamp_epoch,
                                 CONCAT(e.event_locations, l.event_locations) as event_locations
                              FROM earlier e
                                 FULL OUTER JOIN later l

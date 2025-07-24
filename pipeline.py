@@ -18,7 +18,7 @@ dag = DAG(dag_id='hourly_dedupe_as_daily_micro_batch',
           default_args=default_args,
           schedule_interval="@daily")
 
-hours = list(range(1, 24))
+hours = list(range(1, 25))
 products = ['website', 'app']
 all_merges = [
         '1_2': ['1', '2'],
